@@ -1,18 +1,12 @@
-# Welcome to your Lovable project
+# Clean & Green Energy Portfolio
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/e3c514cf-78d1-468c-b7d7-924bbd6f58d0
+This is a portfolio project showcasing renewable energy systems design, including hybrid biogas, wind, solar, and biomass energy solutions.
 
 ## How can I edit this code?
 
 There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/e3c514cf-78d1-468c-b7d7-924bbd6f58d0) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
 
 **Use your preferred IDE**
 
@@ -62,12 +56,11 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/e3c514cf-78d1-468c-b7d7-924bbd6f58d0) and click on Share -> Publish.
+This project can be deployed to any static hosting service that supports Node.js applications:
 
-## Can I connect a custom domain to my Lovable project?
+1. Build the project:
+```sh
+npm run build
+```
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+2. Deploy the contents of the `dist` directory to your chosen hosting platform (Vercel, Netlify, GitHub Pages, etc.)
