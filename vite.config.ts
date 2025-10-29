@@ -4,11 +4,11 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/green-energy-portfolio/',
   server: {
-    port: 3001,
-    strictPort: true,
+    port: 3000,
+    strictPort: false,
     host: true,
-    open: true,
   },
   plugins: [react()],
   resolve: {
