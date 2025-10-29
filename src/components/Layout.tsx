@@ -42,10 +42,20 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <main className="container px-4 md:px-8 py-8">{children}</main>
 
       {/* Footer */}
-      <footer className="border-t border-border bg-card mt-16">
-        <div className="container px-4 md:px-8 py-8 text-center text-sm text-muted-foreground">
-          <p>Clean and Green Energy Portfolio © 2025</p>
-          <p className="mt-2">VIT Chennai | Department of DSBS</p>
+      <footer className="border-t border-primary/20 bg-gradient-to-br from-primary/5 to-secondary/5 mt-16">
+        <div className="container px-4 md:px-8 py-8">
+          <div className="flex flex-col items-center gap-4 text-center">
+            <div className="flex items-center gap-2">
+              <Leaf className="h-5 w-5 text-primary" />
+              <Wind className="h-5 w-5 text-secondary" />
+              <Droplets className="h-5 w-5 text-accent" />
+            </div>
+            <div className="space-y-1">
+              <p className="text-sm font-semibold text-foreground">Clean and Green Energy Portfolio © 2025</p>
+              <p className="text-sm text-muted-foreground">SRM KTR | Department of DSBS</p>
+            </div>
+            <p className="text-xs text-muted-foreground">Powering the future with renewable energy</p>
+          </div>
         </div>
       </footer>
 
