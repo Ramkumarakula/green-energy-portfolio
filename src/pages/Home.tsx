@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Leaf, Wind, Sun, Zap, Droplets } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -71,41 +72,47 @@ const Home = () => {
       <section className="space-y-6">
         <h2 className="text-3xl font-bold text-foreground">Project Activities</h2>
         <div className="grid md:grid-cols-3 gap-6">
-          <Card className="hover:shadow-lg transition-shadow">
-            <CardHeader>
-              <Wind className="h-10 w-10 text-primary mb-2" />
-              <CardTitle>Activity 1</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground">
-                Hybrid Renewable Energy System combining Biogas and Wind Energy for Rural Health Clinic
-              </p>
-            </CardContent>
-          </Card>
+          <Link to="/activity1">
+            <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full">
+              <CardHeader>
+                <Wind className="h-10 w-10 text-primary mb-2" />
+                <CardTitle>Activity 1</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Hybrid Renewable Energy System combining Biogas and Wind Energy for Rural Health Clinic
+                </p>
+              </CardContent>
+            </Card>
+          </Link>
 
-          <Card className="hover:shadow-lg transition-shadow">
-            <CardHeader>
-              <Droplets className="h-10 w-10 text-secondary mb-2" />
-              <CardTitle>Activity 2</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground">
-                Biomass-based Biogas Generation System for Dairy Farm (100 cattle)
-              </p>
-            </CardContent>
-          </Card>
+          <Link to="/activity2">
+            <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full">
+              <CardHeader>
+                <Droplets className="h-10 w-10 text-secondary mb-2" />
+                <CardTitle>Activity 2</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Biomass-based Biogas Generation System for Dairy Farm (100 cattle)
+                </p>
+              </CardContent>
+            </Card>
+          </Link>
 
-          <Card className="hover:shadow-lg transition-shadow">
-            <CardHeader>
-              <Sun className="h-10 w-10 text-accent mb-2" />
-              <CardTitle>Activity 3</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground">
-                Microgrid System integrating Solar PV, Wind, and Biomass for Remote Community
-              </p>
-            </CardContent>
-          </Card>
+          <Link to="/activity3">
+            <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full">
+              <CardHeader>
+                <Sun className="h-10 w-10 text-accent mb-2" />
+                <CardTitle>Activity 3</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Microgrid System integrating Solar PV, Wind, and Biomass for Remote Community
+                </p>
+              </CardContent>
+            </Card>
+          </Link>
         </div>
       </section>
     </div>
