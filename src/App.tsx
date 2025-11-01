@@ -17,10 +17,12 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      {/* FIX: Add the basename prop with your repository name */}
+      <BrowserRouter basename="/green-energy-portfolio"> 
         <Layout>
           <Routes>
-            <Route path="/" element={<Home />} />
+            {/* The root route is now relative to the basename: /green-energy-portfolio/ */}
+            <Route path="/" element={<Home />} /> 
             <Route path="/activity1" element={<Activity1 />} />
             <Route path="/activity2" element={<Activity2 />} />
             <Route path="/activity3" element={<Activity3 />} />
