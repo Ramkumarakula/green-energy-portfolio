@@ -4,7 +4,7 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  // CRITICAL FIX: Use relative base './' to ensure assets load correctly
+  // CRITICAL FIX: Base MUST be relative for GitHub Pages subdirectory deployments
   base: './', 
   server: {
     port: 3000,
@@ -12,6 +12,12 @@ export default defineConfig({
     host: true,
   },
   plugins: [react()],
+  // 🟢 NEW FIX: CSP VIOLATION RESOLUTION
+  build: {
+    // This setting changes how source maps are generated, avoiding the 
+    // use of 'eval()' which violates GitHub Pages' Content Security Policy.
+    sourcemap: 'hidden', 
+  },
   resolve: {
     alias: {
       "@": path.resolve(process.cwd(), "./src"),
